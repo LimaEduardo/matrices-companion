@@ -11,11 +11,15 @@ private:
     int numberOfColumns;
     int **matrix;
 
+
 public:
     Matrix();
     Matrix(int numLines, int numCols);
+    Matrix(int** matrix);
     ~Matrix();
     void fillMatrix();
+    void fillMatrixWithRandom();
+    void fillMatrixWithRandom(int maxNumber);
     void printMatrix();
     void insertIntoPosition(int line, int col, int value);
     int getCols();
