@@ -47,6 +47,7 @@ public:
     Matrix& operator*(Matrix& m2);
     Matrix& operator+(Matrix& m2);
     Matrix& operator-(Matrix& m2);
+    friend ostream& operator<<(ostream& output, Matrix& matrix);
 };
 
 #endif

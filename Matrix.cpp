@@ -86,15 +86,17 @@ void Matrix::printMatrix(){
     }
 }
 
-/*ostream& Matrix::operator<<(ostream& output){
+ostream& operator<<(ostream& output, Matrix& matrix){
+    int numberOfLines = matrix.getLines();
+    int numberOfColumns = matrix.getCols();
     for(int i = 0; i < numberOfLines; i++){
         for (int j = 0; j < numberOfColumns; j++){
-            output = matrix[i][j] + " ";
+            output << matrix.getValue(i,j) << " ";
         }
-        output = "\n";
+        output << "\n";
     }
     return output;
-}*/
+}
 
 Matrix& Matrix::operator*(Matrix& m2){
     int numLinesM1 = this->getLines();
